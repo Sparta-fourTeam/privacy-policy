@@ -167,7 +167,7 @@
         </tr>
         <tr>
             <td>Unity Diagnostics</td>
-            <td>The product documentation lists installation-specific identifiers, crash logs, app diagnostics, and performance data. The Unity Dashboard confirmed receipt of an installation ID and device, OS, memory, GPU, screen, language, locale, and country/region metadata from a 1.0.1/build1 session in the same project. Receipt of installation IDs, sessions, device metadata, and diagnostic data is also confirmed for the current 1.0.2/code2</td>
+            <td>The product documentation lists installation-specific identifiers, crash logs, app diagnostics, and performance data. While additional recommended collection was enabled, the Unity Dashboard confirmed receipt of installation ID and device, OS, memory, GPU, screen, language, locale, and country/region metadata for 1.0.1/build1, and installation IDs, sessions, device metadata, and diagnostic data for 1.0.2/code2. The actual collection scope after the settings change is unverified</td>
             <td>Error analysis and stability improvements</td>
         </tr>
         <tr>
@@ -216,24 +216,27 @@
         <tr>
             <td>Unity Diagnostics</td>
             <td>Unity</td>
-            <td>Error analysis and stability improvements. Enabled in build settings; mandatory collection and additional recommended collection are enabled in the Dashboard</td>
+            <td>Error analysis and stability improvements. Enabled in build settings; the Dashboard currently shows Collection settings: Essential and Additional Recommended Data: OFF</td>
         </tr>
     </tbody>
 </table>
 </div>
 
 <p>
-    The Unity Dashboard project matching the release source was confirmed to have
-    mandatory collection and Additional Recommended enabled.
+    In the Unity Dashboard project matching the release source,
+    Additional Recommended Data was saved as OFF at 2026-10-13 16:52 UTC and rechecked.
+    Collection settings currently shows Essential, and Essential collection is always enabled.
     All four Usage options are enabled: customer-centric features, modeling and aggregated insights,
     technical support, and business recommendations.
     Additional Access for Unity Ads has not been granted.
 </p>
 
 <p>
-    Following com.teamdoodle.doodledefense version 1.0.1/build1,
+    Before the collection settings change, following com.teamdoodle.doodledefense version 1.0.1/build1,
     receipt of installation IDs, sessions, device metadata, and diagnostic data is also confirmed
     from Android Play installation sessions of the current review build, 1.0.2/code2.
+    There are no new sessions after the change yet, so changes to the actual collection scope
+    and the propagation delay remain unverified. Previously received data has not been deleted.
     The source and reporting classification of country/region metadata are under review.
 </p>
 

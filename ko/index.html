@@ -176,7 +176,7 @@
                 </tr>
                 <tr>
                     <td>Unity Diagnostics</td>
-                    <td>공식 제품 문서상 설치별 식별자, 크래시 로그, 앱 진단 및 성능 자료. Unity Dashboard에서 같은 프로젝트의 1.0.1/build1 세션으로부터 설치 ID와 기기·OS·메모리·GPU·화면·언어·로케일·국가/지역 메타데이터 수신 확인. 현재 1.0.2/code2에서도 설치 ID·세션·기기 메타데이터 및 진단 자료의 실제 수신 확인</td>
+                    <td>공식 제품 문서상 설치별 식별자, 크래시 로그, 앱 진단 및 성능 자료. 추가 권장 수집 활성 기간에 Unity Dashboard에서 1.0.1/build1의 설치 ID와 기기·OS·메모리·GPU·화면·언어·로케일·국가/지역 메타데이터, 1.0.2/code2의 설치 ID·세션·기기 메타데이터 및 진단 자료 수신 확인. 설정 변경 후 실제 수집 범위는 미검증</td>
                     <td>오류 분석 및 안정성 개선</td>
                 </tr>
                 <tr>
@@ -225,24 +225,27 @@
                 <tr>
                     <td>Unity Diagnostics</td>
                     <td>Unity</td>
-                    <td>오류 분석 및 안정성 개선. 빌드 설정상 활성; Dashboard의 필수 수집 및 추가 권장 수집 활성</td>
+                    <td>오류 분석 및 안정성 개선. 빌드 설정상 활성; 현재 Dashboard의 Collection settings는 Essential, Additional Recommended Data는 OFF</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <p>
-        출시 소스와 일치하는 Unity 프로젝트의 Dashboard에서 필수 수집과
-        Additional Recommended가 활성 상태로 확인됐습니다.
+        출시 소스와 일치하는 Unity 프로젝트의 Dashboard에서
+        Additional Recommended Data를 2026-10-13 16:52 UTC에 OFF로 저장하고
+        재확인했습니다. 현재 Collection settings는 Essential이며 Essential 수집은 항상 활성입니다.
         Usage의 고객 중심 기능, 모델링·집계 인사이트, 기술 지원,
         비즈니스 권장 사항도 모두 활성 상태입니다.
         Unity Ads의 추가 액세스는 허용되지 않았습니다.
     </p>
 
     <p>
-        com.teamdoodle.doodledefense의 1.0.1/build1에 이어
-        현재 검토 대상 1.0.2/code2의 Android Play 설치 세션에서도
+        수집 설정 변경 전 com.teamdoodle.doodledefense의 1.0.1/build1에 이어
+        검토 대상 1.0.2/code2의 Android Play 설치 세션에서도
         설치 ID·세션·기기 메타데이터 및 진단 자료의 실제 수신을 확인했습니다.
+        변경 후 새 세션은 아직 없어 실제 수집 범위 변화와 적용 지연은 미검증이며,
+        기존 수신 데이터는 삭제하지 않았습니다.
         국가/지역 메타데이터의 출처와 신고 분류는 검토 중입니다.
     </p>
 
