@@ -44,21 +44,22 @@
 2026-10-13 보완 작업에 전달받은 Unity Dashboard 읽기 전용 확인 결과를 반영했다. 이번 HTML 수정 작업에서 Dashboard 설정을 바꾸거나 원본 세션·설치 ID 값을 저장소로 전송하지 않았다.
 
 - ProjectNova 프로젝트 ID `23795b90-83b5-4aa3-8841-29e4ac7fcf22`가 출시 소스와 일치함을 확인한 결과가 전달됐다.
-- 변경 전 Collection 이력: 필수 수집 활성, Additional Recommended ON. 아래 1.0.1/build1과 1.0.2/code2 수신 관측은 이 ON 기간의 근거이며, 현재 OFF 상태의 실제 수집 범위를 입증하지 않는다.
-- 현재 Collection: 사용자가 Additional Recommended Data OFF를 승인했고, 2026-10-13 16:52 UTC (2026-10-14 01:52 KST)에 ProjectNova에서 해당 설정만 OFF로 저장한 결과가 전달됐다. Unity 성공 알림, 새로고침·재진입 후 OFF 유지 및 `Collection settings: Essential`을 확인했다. Essential은 항상 활성이다. 이번 문서 수정에서 진단 설정을 변경한 것은 아니다.
+- 최초 Collection 이력: 필수 수집 활성, Additional Recommended ON. 아래 1.0.1/build1과 1.0.2/code2 수신 관측은 이 ON 기간의 근거이며, 이후 OFF 기간이나 ON 복원 후 단말 동기화·수집 범위를 입증하지 않는다.
+- 일시 OFF 이력: 사용자가 Additional Recommended Data OFF를 승인했고, 2026-10-13 16:52 UTC (2026-10-14 01:52 KST)에 ProjectNova에서 해당 설정만 OFF로 저장한 결과가 전달됐다. Unity 성공 알림, 새로고침·재진입 후 OFF 유지 및 `Collection settings: Essential`을 확인했다. 이 상태는 아래 ON 복원으로 종료됐다.
+- 현재 Collection: 사용자가 다시 ON을 승인했고, 2026-10-13 17:17:53 UTC 전후 (2026-10-14 02:17:53 KST)에 ProjectNova Additional Recommended Data를 ON으로 복원한 결과가 전달됐다. 적용 성공 알림과 새로고침·재진입 후 `Essential + Recommended` 유지를 확인했다. Essential·Usage 네 항목·Ads 추가 액세스는 변경하지 않았다. 이번 문서 수정에서 진단 설정을 변경한 것은 아니다.
 - Usage: 고객 중심 기능, 모델링/집계 인사이트, 기술 지원, 비즈니스 권장 사항 네 항목 모두 ON. 활성 설정을 해당 용도의 실제 처리 완료 증거로 확대하지 않는다.
 - Additional Access: Unity Ads는 액세스 허용 버튼이 표시되는 미허용 상태. Usage 옵션 활성이나 지역 메타데이터 수신을 광고 사용의 증거로 해석하지 않는다.
 - 변경 전 Additional Recommended ON 기간의 실제 Play 설치 패키지 `com.teamdoodle.doodledefense`, 앱 1.0.1/build1의 세션에서 설치 ID 및 기기·OS·메모리·GPU·화면·언어·로케일·국가/지역 메타데이터 수신을 확인한 결과가 전달됐다. 모든 빌드의 진단 전송이 미확인이라고 설명하면 안 된다.
 - 변경 전 Additional Recommended ON 기간인 2026-10-13 KST 추가 확인 결과, 현재 문서 대상과 정확히 일치하는 `com.teamdoodle.doodledefense` / 앱 1.0.2 / build2 / AndroidPlayer / Play 설치 세션이 Dashboard에서 확인됐다. 현재 배포 빌드의 설치 ID·세션·기기 메타데이터·진단 자료 전송 및 수신이 실증되어 이전의 실제 수신 미확인 항목은 해소했다. 전달받은 확인 결과를 반영하며 개별 식별자·팀원 기기 상세나 원본 세션 자료는 저장소에 기재하지 않는다.
 - 다른 과거 패키지 `com.teamdoodle.doodledoodle`의 build2 세션을 현재 출시 패키지의 1.0.2/code2 수신 증거로 혼동하지 않는다.
 - 지역 메타데이터의 출처와 Google 신고 분류는 미확정이다. 나라/지역 메타데이터 존재만으로 위치정보 수집·정밀도·필수성·공유 분류를 임의 확정하지 않는다.
-- 설정 변경 후 새 세션이 아직 없어 지역 필드 감소·전체 수집 범위 변화·정확한 적용 지연은 미검증이다. 기존 수신 데이터도 삭제하지 않았다. OFF 저장을 “수집 없음” 또는 기존 자료 삭제 완료로 해석하지 않는다. Usage 네 항목 ON과 Unity Ads 추가 액세스 미허용은 유지된다.
+- 일시 OFF 기간 이후 새 세션에서도 지역 필드가 관측된 결과가 전달됐다. 해당 단말에 설정이 동기화됐는지는 불명이며, 이 관측만으로 OFF의 효과나 지역 필드 생성 경로·신고 분류를 확정하지 않는다. 전체 수집 범위 변화·정확한 적용 지연은 미검증이다. 기존 수신 데이터도 삭제하지 않았다. OFF 저장이나 ON 복원을 “수집 없음” 또는 기존 자료 삭제 완료로 해석하지 않는다. Usage 네 항목 ON과 Unity Ads 추가 액세스 미허용은 유지된다.
 
 ## Unity 공식 자료와 앱 사실의 구분
 
 2026-10-13에 [Diagnostics privacy overview](https://docs.unity.com/en-us/cloud/developer-data/privacy-overview)와 [Google Play data safety](https://docs.unity.com/en-us/cloud/developer-data/google-data-safety)를 확인했다. 제품 문서는 설치별 ID와 크래시·진단·성능 자료를 설명한다. 기본 보관 90일은 Unity 제품 기준이며 이 앱의 확인된 보관 기간으로 단정하지 않는다.
 
-[프로젝트 데이터 설정 공식 문서](https://docs.unity.com/en-us/cloud/developer-data/configure-data-project)는 Dashboard 설정 변경이 기존 출시 앱에 자동 동기화되며 새 빌드가 필요 없다고 설명한다. 제품 설명과 별도로 이 앱의 변경 후 실제 세션·수집 범위와 정확한 적용 지연은 아직 확인되지 않았다.
+[프로젝트 데이터 설정 공식 문서](https://docs.unity.com/en-us/cloud/developer-data/configure-data-project)는 Dashboard 설정 변경이 기존 출시 앱에 자동 동기화되며 새 빌드가 필요 없다고 설명한다. 제품 설명과 별도로 이 앱의 설정 전환 후 단말 동기화 여부·전체 수집 범위와 정확한 적용 지연은 아직 확인되지 않았다.
 
 제품 문서의 개발자 설치 ID별 삭제 기능은 이 앱에서 사용자 요청 처리 운영이 구현·검증됐다는 뜻이 아니다. 개인정보 문의·삭제 요청 창구는 `teamdoodle.dev@gmail.com`으로 사용자 확정됐지만, 게임에서 Unity 설치 ID를 확인하는 수단과 실제 삭제 처리 절차는 미확인이다. data-safety의 사용자 삭제 수단 항목과 개발자용 삭제 경로도 구분한다. code2의 전체 수집 조건, 사용자 측 설치 ID 취득·사용자 식별·삭제 요청 연결, 삭제에 필요한 권한과 운영을 확인해야 한다. Unity 문서의 목적·공유 분류를 앱 전체 Play 신고에 그대로 복사하지 않는다.
 
@@ -69,8 +70,8 @@
 - [x] 대상 연령은 만 13세 이상 청소년·성인으로 사용자 확정. 이전 “12세 이용가?” 질문으로 추정한 것이 아니다.
 - [ ] 확정된 대상 연령에 맞는 연령 확인 및 아동 이용·진단 처리의 적정 절차를 검토한다. 연령 제한·보호자 동의가 실제 구현·운영 중이라고 주장하지 않는다.
 - [x] 정확한 출시 패키지 `com.teamdoodle.doodledefense`의 1.0.2/build2 AndroidPlayer·Play 설치 세션으로 현재 code2의 설치 ID·세션·기기 메타데이터·진단 자료 실제 전송과 수신을 확인했다. 다른 패키지나 1.0.1/build1 증거로 대체한 것이 아니다.
-- [x] 승인된 Additional Recommended Data OFF 저장·재확인 결과를 현재 설정으로 반영했다. Essential 활성, Usage 네 항목 ON, Unity Ads 추가 액세스 미허용은 유지한다.
-- [ ] 변경 후 새 출시 앱 세션으로 실제 수집 범위·지역 필드 변화와 적용 지연을 검증한다. 변경 전 ON 기간의 수신 관측으로 대체하지 않는다.
+- [x] 승인된 Additional Recommended Data OFF 저장·재확인과 이후 ON 복원·재확인 결과를 이력으로 보존하고, 현재 설정은 Essential + Recommended / ON으로 반영했다. Essential 활성, Usage 네 항목 ON, Unity Ads 추가 액세스 미허용은 유지한다.
+- [ ] 설정 전환 후 출시 앱 세션으로 단말 동기화 여부·실제 수집 범위·지역 필드 변화와 적용 지연을 검증한다. 최초 ON 기간의 수신이나 일시 OFF 이후 지역 필드 관측만으로 대체하지 않는다.
 - [ ] 크래시 경로·전체 수집 범위·추가 메타데이터를 검증한다. 진단 유지/비활성 결정과 활성 Usage 조건에 필요한 안내·처리 근거를 검토한다.
 - [ ] 국가/지역 메타데이터가 어떤 경로에서 생성되는지와 Google 신고 분류를 검증한다. 위치정보 여부·정밀도·공유·필수성을 임의 확정하지 않는다.
 - [ ] Diagnostics 처리 주체·위탁/제공 관계·이전 국가·이전 항목·시점/방법·근거·거부 방법 및 실제 보관 조건을 확인한다. Unity 제품 기본 90일을 앱 운영 사실로 대체하지 않는다.
@@ -92,4 +93,4 @@
 - ko/en 정책은 11개 절과 2개 표, 삭제 안내는 ko/en 각 5개 절. 각 언어에서 빌드 버전, 로컬 저장, 인증 미연결, Diagnostics, SDK 부재, 표시 ID·삭제 한계 및 문의 주소를 교차 검토했다.
 - 정책 HTML 디렉터리만 `127.0.0.1` 로컬 서버로 열어 Chrome에서 루트→ko→en→삭제 안내 링크를 실제 탐색하고, 정책·삭제 안내의 표·초안 박스·탐색·문의 버튼 렌더를 확인했다. 외부 공개 서버·Pages로 배포하지 않았다. 모바일 화면 및 실제 앱 기능은 이 검사 범위에 포함하지 않았다.
 - Dashboard·빌드별 수신·연령 및 현재 code2 실제 수신 확인 보완 후 같은 HTML/CSS/42개 링크 검사를 다시 통과했다. 운영주체·이메일 접수 창구 확정 보완에도 같은 검사와 Chrome localhost 한·영 정책·삭제 안내 확인을 수행했고, 시행일·설치 ID 확인 수단·삭제 처리 절차·지역 분류의 미확정을 유지했다. ko/en의 연령, Dashboard 옵션 및 패키지·빌드 구분을 교차 확인하고, Chrome localhost에서 수정된 정책 표와 한·영 삭제 안내를 다시 렌더·탐색했다. 전달받은 Dashboard 증거의 범위를 명시했으며, 원본 진단 세션이나 설치 ID 값은 게시하지 않았다.
-- Additional Recommended Data OFF 보완 후 HTML/CSS/42개 링크·diff 검사와 Chrome localhost 한·영 정책·삭제 안내 확인을 수행했다. 현재 설정과 변경 전 관측 이력을 구분했고, 새 세션·지역 분류·적용 지연의 미검증을 유지했다.
+- Additional Recommended Data OFF 및 이후 ON 복원 보완 후 HTML/CSS/42개 링크·diff 검사와 Chrome localhost 한·영 정책 확인을 수행했다. 현재 설정과 일시 OFF·지역 필드 관측 이력을 구분했고, 단말 동기화·지역 출처/신고 분류·적용 지연의 미검증을 유지했다.
