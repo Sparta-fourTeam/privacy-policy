@@ -168,7 +168,7 @@
         <tr>
             <td>Unity Diagnostics</td>
             <td>The product documentation lists installation-specific identifiers, crash logs, app diagnostics, and performance data. While additional recommended collection was enabled, the Unity Dashboard confirmed receipt of installation ID and device, OS, memory, GPU, screen, language, locale, and country/region metadata for 1.0.1/build1, and installation IDs, sessions, device metadata, and diagnostic data for 1.0.2/code2. The actual collection scope after the settings change is unverified</td>
-            <td>Error analysis and stability improvements</td>
+            <td>Error analysis and stability improvements. See section 3 for additional use permitted by enabled Usage settings</td>
         </tr>
         <tr>
             <td>Email Inquiries, Feedback, and Deletion Requests</td>
@@ -194,8 +194,9 @@
 </p>
 
 <p>
-    The Unity Diagnostics retention and deletion conditions applicable to this app
-    and operational rules for retaining and deleting inquiry emails are under review.
+    Unity's Diagnostics documentation describes a default retention period of 90 days.
+    This product default is not presented as a confirmed retention period covering the additional uses below.
+    Field-specific retention for additional use, actual storage countries, and retention and deletion rules for inquiry emails are under review.
     This draft does not specify a finalized app retention period or deletion deadline.
 </p>
 
@@ -229,6 +230,22 @@
     All four Usage options are enabled: customer-centric features, modeling and aggregated insights,
     technical support, and business recommendations.
     Additional Access for Unity Ads has not been granted.
+    Google Analytics is not linked.
+</p>
+
+<p>
+    Unity's product documentation describes Essential data such as crash logs, telemetry, and configuration metadata needed for services.
+    Additional Recommended can include data beyond what is essential for the services in use.
+    Enabled Usage settings permit additional purposes such as aggregated, abstracted cross-developer features,
+    anonymized benchmarks and model improvements, technical support, and business recommendations.
+    The fields actually used and the app's disclosure and use scope require separate review.
+</p>
+
+<p>
+    The three additional facts pending for data safety classification are personally linkable fields entering independent processing
+    and the point of anonymization; whether country/subdivision represents physical location estimation or merely locale;
+    and whether additional recommended collection includes app interactions beyond the four basic diagnostic data types.
+    Enabled Usage settings or accepted conditions alone do not determine sharing for all four types.
 </p>
 
 <p>
@@ -250,6 +267,8 @@
 <ul>
     <li><a href="https://docs.unity.com/en-us/cloud/developer-data/privacy-overview">Unity Diagnostics Privacy Overview</a></li>
     <li><a href="https://docs.unity.com/en-us/cloud/developer-data/google-data-safety">Unity Diagnostics Google Play Data Safety Information</a></li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/collection-settings">Unity Collection Settings</a></li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/data-usage-settings">Unity Additional Usage Settings</a></li>
 </ul>
 
 <h2>4. International Data Transfers</h2>
@@ -263,16 +282,21 @@
 <h2>5. Data Sharing and Processing</h2>
 
 <p>
-    The disclosure and service provider arrangements and applicable conditions for
-    Unity diagnostics and the inquiry email service are under review.
-    Account or game progress server processing and future SDK use are not described as current build practices.
+    The basic Diagnostics processing relationship must be distinguished from additional use under enabled Usage settings.
+    Unity's terms describe separate data protection roles for certain purposes,
+    and acceptance of controller-controller conditions was confirmed in the actual Usage screen.
+    This draft does not classify all processing as processing on our behalf or as no sharing.
+    Specific disclosure, service provider, and international transfer arrangements are under review.
 </p>
+
+<p><a href="https://unity.com/legal/developer-data-framework-additional-terms">Unity Developer Data Framework Additional Terms</a></p>
 
 <h2>6. Data Deletion</h2>
 
 <p>
-    Deletion of local information, Unity diagnostic data, and inquiry emails each requires separate verification.
-    This draft does not claim that verified deletion procedures or irreversible erasure methods are already in operation.
+    The Unity Dashboard route to request Diagnostics deletion by installation ID has been confirmed.
+    No deletion was executed, and the process from user submission through completion has not been verified.
+    Deletion of local save information and inquiry emails requires separate verification.
 </p>
 
 <h2>7. User Rights and Inquiries</h2>
@@ -289,6 +313,13 @@
     This build does not create server accounts or Google or Apple account links.
     It has no function to remotely delete local device data through email.
     The in-game LOCAL-0001 is a shared display value, not a unique identifier for deletion requests.
+</p>
+
+<p>
+    Once means of checking and forwarding the Unity installation ID are included in the release build and verified on a device,
+    the planned procedure is for the operator to use the Unity installation ID received through an inquiry to request deletion of Unity diagnostic data.
+    This is separate from local game saves and server account data. Immediate deletion or a fixed completion date is not guaranteed.
+    The automatic inquiry form is not yet a feature provided and verified in the current release build.
 </p>
 
 <p><a href="../delete-account/">Local Data and Deletion Information</a></p>
