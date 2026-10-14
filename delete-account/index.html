@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>계정 삭제 / Account Deletion | TeamDoodle</title>
+    <meta name="robots" content="noindex">
+    <title>로컬 데이터·삭제 안내 / Local Data &amp; Deletion | TeamDoodle</title>
 
     <style>
         * { box-sizing: border-box; }
@@ -115,214 +116,176 @@
 
 <section lang="ko">
 
-    <h1>계정 삭제 안내</h1>
+    <h1>로컬 데이터 및 삭제 안내</h1>
 
     <p>
-        게임: <strong>doodledoodle</strong><br>
-        운영자: <strong>TeamDoodle</strong>
+        게임: <strong>끄적끄적 디펜스</strong><br>
+        운영주체: <strong>TeamDoodle</strong><br>
+        검토 대상: 로컬 비공개 테스트 버전 1.0.2 (버전 코드 2)
     </p>
 
     <div class="notice">
-        본 페이지는 출시 전 안내 초안입니다.
-        실제 계정 삭제 기능과 요청 처리 절차는
-        정식 출시 전에 검증할 예정입니다.
+        검토용 초안이며 확정된 삭제 절차가 아닙니다.
+        현재 빌드의 로컬 정보와 외부 진단 자료를 구분해 안내합니다.
     </div>
 
-    <h2>1. 계정 삭제 요청</h2>
+    <h2>1. 현재 빌드의 계정·저장 방식</h2>
 
     <p>
-        doodledoodle 이용자는
-        자신의 게임 계정 및 관련 데이터의
-        삭제를 요청할 수 있습니다.
-    </p>
-
-    <p>
-        계정 삭제 요청은 아래 이메일을 통해
-        접수할 수 있도록 준비하고 있습니다.
+        게스트 식별자는 기기에서 무작위 생성해 PlayerPrefs에 저장하고,
+        게임 진행은 기기의 save.json에 저장합니다.
+        계정 서버·진행 동기화는 연결되어 있지 않으며 Google·Apple 연동도 이용할 수 없습니다.
+        이메일로 기기의 로컬 정보를 원격 삭제하는 기능은 없습니다.
     </p>
 
     <div class="box">
-        <p>
-            <strong>계정 삭제 요청 이메일</strong>
-        </p>
-
-        <p>
-            teamdoodle.dev@gmail.com
-        </p>
-
-        <a
-            class="button"
-            href="mailto:teamdoodle.dev@gmail.com?subject=doodledoodle%20계정%20삭제%20요청">
-            이메일로 요청하기
-        </a>
+        <p><strong>개인정보 문의·삭제 요청 이메일</strong></p>
+        <p>teamdoodle.dev@gmail.com</p>
+        <a class="button" href="mailto:teamdoodle.dev@gmail.com">이메일로 문의·삭제 요청하기</a>
     </div>
 
-    <h2>2. 요청 시 필요한 정보</h2>
+    <h2>2. 문의 시 유의사항</h2>
 
     <p>
-        계정 식별 및 소유 확인을 위해
-        게임 내 사용자 ID 등의 정보가
-        필요할 수 있습니다.
+        게임 화면의 LOCAL-0001은 공통 표시값으로 고유한 계정·설치 식별자가 아닙니다.
+        이 값으로 삭제 대상이나 본인을 식별할 수 없습니다.
+        안전한 정보 식별과 요청 처리 절차는 검토 중입니다.
     </p>
 
     <p>
-        Google 계정 연동 사용자의 경우에도
-        계정 소유 여부를 확인하기 위한
-        별도 절차가 적용될 수 있습니다.
+        비밀번호, 인증 토큰, 주민등록번호, 원본 저장 파일 등
+        민감한 정보나 불필요한 개인정보를 이메일로 보내지 마세요.
     </p>
 
-    <p>
-        Google 비밀번호, 인증 토큰,
-        주민등록번호 등의 민감한 인증 정보를
-        이메일로 보내지 마세요.
-    </p>
-
-    <h2>3. 삭제 대상 데이터</h2>
+    <h2>3. 삭제 범위를 구분해야 하는 정보</h2>
 
     <ul>
-        <li>게임 계정 및 사용자 식별자</li>
-        <li>Google 계정 연동 정보</li>
-        <li>게임 내 재화</li>
-        <li>스테이지 진행도</li>
-        <li>영구 강화 정보</li>
-        <li>전투 및 보상 기록</li>
-        <li>그 밖의 계정과 연결된 게임 데이터</li>
+        <li>기기의 로컬 게스트 식별자·로그인 방식 (PlayerPrefs)</li>
+        <li>기기의 게임 진행·재화·강화·전투·보상 기록 등 (save.json)</li>
+        <li>Unity Diagnostics 자료: 설정상 활성; 수집 설정 변경 전 같은 프로젝트의 1.0.1/build1과 1.0.2/code2 수신 확인; 실제 삭제 처리 절차는 미검증</li>
+        <li>이용자가 보낸 문의 이메일: 보관·삭제 운영 기준은 미확정</li>
     </ul>
 
-    <h2>4. 삭제 후 유의사항</h2>
+    <p>
+        Firebase Crashlytics·GameAnalytics SDK는 현재 빌드에 없습니다.
+        로컬 정보 삭제와 외부 진단 자료 또는 문의 이메일 삭제는 서로 다른 범위입니다.
+    </p>
+
+    <h2>4. 로컬 삭제·복원 및 외부 진단 자료</h2>
 
     <p>
-        계정 및 관련 게임 데이터가 삭제되면
-        기존 게임 진행 상태를 복구하지 못할 수 있습니다.
+        앱 데이터 삭제·제거, 재설치, 기기·OS 백업 복원에 따른 실제 삭제와 복구 동작은
+        아직 검증되지 않았습니다. 따라서 특정 조작으로 모든 정보가
+        영구 삭제되거나 복구되지 않는다고 보장하지 않습니다.
     </p>
 
     <p>
-        다만 법령에 따라 보관해야 하는
-        정보가 있다면 해당 법정 기간 동안
-        별도로 보관할 수 있습니다.
+        Unity 제품 문서와 실제 ProjectNova Dashboard에서 설치 ID별 진단 자료 삭제 요청 경로를 확인했습니다.
+        삭제 실행이나 이용자 접수부터 완료까지의 검증은 하지 않았습니다.
+        사용자 삭제 요청은 위 이메일로 접수할 수 있습니다.
+        출시 빌드에 Unity 설치 ID 확인·문의 전달 수단을 반영하고 실기기 검증한 뒤,
+        운영자는 문의로 받은 Unity 설치 ID로 Unity 진단 데이터 삭제를 요청하는 절차를 적용할 예정입니다.
+        자동 문의 양식은 아직 현 출시 빌드에 제공·검증되지 않았습니다.
+        이 절차는 로컬 게임 저장 및 서버 계정 데이터와 별개이며 즉시 삭제나 확정 처리일을 보장하지 않습니다.
+        수집 설정 변경 전 1.0.2/code2의 Android Play 설치 세션에서 실제 진단 자료 수신도 확인됐습니다.
+        삭제 완료 기한이나 외부 자료·이메일 보관 기간은 확정되지 않았습니다.
     </p>
 
-    <p>
-        외부 분석 서비스 및 백업 데이터의
-        삭제 범위와 처리 기간은
-        출시 전 확정하여 안내할 예정입니다.
-    </p>
-
-    <h2>5. 문의</h2>
+    <h2>5. 문의 및 관련 안내</h2>
 
     <p>
-        운영자: TeamDoodle<br>
-        이메일:
-        <a href="mailto:teamdoodle.dev@gmail.com">
-            teamdoodle.dev@gmail.com
-        </a>
+        운영주체: TeamDoodle<br>
+        개인정보 문의·삭제 요청 이메일: <a href="mailto:teamdoodle.dev@gmail.com">teamdoodle.dev@gmail.com</a><br>
+        <a href="../ko/">개인정보처리방침 검토 초안</a> ·
+        <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity Diagnostics 설치 ID별 삭제 요청 안내</a>
     </p>
 
 </section>
 
 <section lang="en">
 
-    <h1>Account Deletion</h1>
+    <h1>Local Data and Deletion Information</h1>
 
     <p>
-        Game: <strong>doodledoodle</strong><br>
-        Operator: <strong>TeamDoodle</strong>
+        Game: <strong>끄적끄적 디펜스</strong><br>
+        Operator: <strong>TeamDoodle</strong><br>
+        Review scope: Local private test version 1.0.2 (version code 2)
     </p>
 
     <div class="notice">
-        This page is a pre-release draft.
-        The account deletion process will be
-        verified before the Game is released.
+        This is a review draft, not a finalized deletion procedure.
+        It distinguishes local information from external diagnostic data in the current build.
     </div>
 
-    <h2>1. Request Account Deletion</h2>
+    <h2>1. Accounts and Storage in This Build</h2>
 
     <p>
-        Users may request deletion of their
-        doodledoodle accounts and associated data.
-    </p>
-
-    <p>
-        We are preparing to accept account
-        deletion requests through the
-        following contact email.
+        A guest identifier is randomly generated on the device and stored in PlayerPrefs;
+        game progress is stored in save.json on the device.
+        There is no connection to an account server or progress synchronization, and Google and Apple linking are unavailable.
+        There is no function to remotely delete local device data through email.
     </p>
 
     <div class="box">
-        <p>
-            <strong>Account Deletion Email</strong>
-        </p>
-
-        <p>
-            teamdoodle.dev@gmail.com
-        </p>
-
-        <a
-            class="button"
-            href="mailto:teamdoodle.dev@gmail.com?subject=doodledoodle%20Account%20Deletion%20Request">
-            Request Deletion
-        </a>
+        <p><strong>Privacy Inquiry and Deletion Request Email</strong></p>
+        <p>teamdoodle.dev@gmail.com</p>
+        <a class="button" href="mailto:teamdoodle.dev@gmail.com">Send an Inquiry or Deletion Request</a>
     </div>
 
-    <h2>2. Required Information</h2>
+    <h2>2. Information for Inquiries</h2>
 
     <p>
-        Your in-game user ID or other account
-        information may be required to identify
-        your account and verify ownership.
+        The in-game LOCAL-0001 is a shared display value, not a unique account or installation identifier.
+        It cannot identify deletion targets or verify identity.
+        Safe data identification and request handling procedures are under review.
     </p>
 
     <p>
-        Additional verification may be necessary
-        for accounts linked to Google.
+        Do not email passwords, authentication tokens, government-issued identification numbers,
+        original save files, sensitive information, or unnecessary personal data.
     </p>
 
-    <p>
-        Do not send passwords, authentication
-        tokens, government-issued identification
-        numbers, or other sensitive credentials
-        by email.
-    </p>
-
-    <h2>3. Data to Be Deleted</h2>
+    <h2>3. Information Requiring Separate Deletion Review</h2>
 
     <ul>
-        <li>Game account and user identifier</li>
-        <li>Linked Google account information</li>
-        <li>In-game currency</li>
-        <li>Stage progression</li>
-        <li>Permanent upgrades</li>
-        <li>Battle and reward records</li>
-        <li>Other account-associated gameplay data</li>
+        <li>Local guest identifier and login method on the device (PlayerPrefs)</li>
+        <li>Game progress, currency, upgrades, battle and reward records, etc., on the device (save.json)</li>
+        <li>Unity Diagnostics data: enabled in settings; receipt before the collection settings change for both 1.0.1/build1 in the same project and 1.0.2/code2 is confirmed; actual deletion handling procedures are unverified</li>
+        <li>Inquiry emails sent by users: operational retention and deletion rules are not finalized</li>
     </ul>
 
-    <h2>4. Important Information</h2>
+    <p>
+        Firebase Crashlytics and GameAnalytics SDKs are absent from this build.
+        Deleting local information, external diagnostic data, and inquiry emails involves different scopes.
+    </p>
+
+    <h2>4. Local Deletion, Restoration, and External Diagnostics</h2>
 
     <p>
-        Once an account and its associated
-        gameplay data are deleted,
-        previous progress may not be recoverable.
+        Actual deletion and recovery behavior when clearing app data, uninstalling, reinstalling,
+        or restoring device or OS backups has not yet been verified.
+        No particular action is guaranteed to permanently delete all information or prevent recovery.
     </p>
 
     <p>
-        Certain information may be retained
-        where required by applicable law.
+        Unity's product documentation and the actual ProjectNova Dashboard confirm a route to request diagnostic data deletion by installation ID.
+        No deletion was executed, and user submission through completion has not been verified.
+        User deletion requests may be submitted to the email above.
+        Once means of checking and forwarding the Unity installation ID are included in the release build and verified on a device,
+        the planned procedure is for the operator to use the Unity installation ID received through an inquiry to request deletion of Unity diagnostic data.
+        The automatic inquiry form is not yet provided and verified in the current release build.
+        This is separate from local game saves and server account data. Immediate deletion or a fixed completion date is not guaranteed.
+        Actual receipt of diagnostic data before the collection settings change is also confirmed from Android Play installation sessions of 1.0.2/code2.
+        Deletion deadlines and retention periods for external data or emails are not finalized.
     </p>
 
-    <p>
-        The scope and timing of deletion
-        for analytics services and backups
-        will be confirmed before release.
-    </p>
-
-    <h2>5. Contact</h2>
+    <h2>5. Contact and Related Information</h2>
 
     <p>
         Operator: TeamDoodle<br>
-        Email:
-        <a href="mailto:teamdoodle.dev@gmail.com">
-            teamdoodle.dev@gmail.com
-        </a>
+        Privacy inquiry and deletion request email: <a href="mailto:teamdoodle.dev@gmail.com">teamdoodle.dev@gmail.com</a><br>
+        <a href="../en/">Privacy Policy Review Draft</a> ·
+        <a href="https://docs.unity.com/en-us/cloud/developer-data/manage-diagnostics-data">Unity Diagnostics Deletion Requests by Installation ID</a>
     </p>
 
 </section>

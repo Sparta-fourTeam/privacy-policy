@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex">
-    <title>Privacy Policy | doodledoodle</title>
+    <title>Privacy Policy | 끄적끄적 디펜스</title>
 
     <style>
         * { box-sizing: border-box; }
@@ -113,34 +113,34 @@
         <a href="../">Home</a>
         <a href="../ko/">한국어</a>
         <a href="./" aria-current="page">English</a>
-        <a href="../delete-account/">Account Deletion</a>
+        <a href="../delete-account/">Local Data &amp; Deletion</a>
     </nav>
 </header>
 
-<h1>doodledoodle Privacy Policy</h1>
+<h1>끄적끄적 디펜스 Privacy Policy</h1>
 
 <p class="muted">
     Operator: TeamDoodle<br>
-    Last reviewed: To be determined
+    Review scope: Local private test version 1.0.2 (version code 2)<br>
+    Effective date: Not finalized
 </p>
 
 <div class="notice">
-    This document is a pre-release draft.
-    It will be finalized after verification of
-    the game's actual data processing practices.
+    This is a review draft for the local private test build intended for Korea.
+    It is not a finalized or effective policy. Processing procedures still require review.
 </div>
 
 <p>
-    TeamDoodle ("we", "us", or "the operator")
-    is committed to protecting the privacy of
-    users of doodledoodle ("the Game").
+    This draft describes the local storage, diagnostic settings, and contact route
+    confirmed for the current build of 끄적끄적 디펜스 (the "Game").
 </p>
 
 <p>
-    This Privacy Policy explains the categories
-    of information processed in connection with
-    the Game, their purposes, retention,
-    third-party services, and user rights.
+    The current build uses guest access and stores game progress on the device.
+    It has no connection to an account server or game progress synchronization.
+    Google and Apple sign-in and account linking are unavailable.
+    The current build has no advertising.
+    The target audience is adolescents and adults aged 13 and over.
 </p>
 
 <h2>1. Information Processed and Purposes</h2>
@@ -156,91 +156,53 @@
     </thead>
     <tbody>
         <tr>
-            <td>Guest Account</td>
-            <td>Server-generated user identifier</td>
-            <td>Account creation and identification</td>
+            <td>Local Guest Information</td>
+            <td>A randomly generated guest identifier and login method, stored on the device in PlayerPrefs</td>
+            <td>Maintaining guest access on the device</td>
         </tr>
         <tr>
-            <td>Google Account Linking</td>
-            <td>Google account identifier (sub)</td>
-            <td>Account linking and recovery</td>
+            <td>Local Gameplay Information</td>
+            <td>Progress, currency, experience, upgrades, battle and reward records, etc., stored in save.json on the device</td>
+            <td>Saving and loading game progress</td>
         </tr>
         <tr>
-            <td>Gameplay Data</td>
-            <td>
-                Stage progress, in-game currency,
-                upgrades, battle and reward records
-            </td>
-            <td>Saving and restoring game progress</td>
+            <td>Unity Diagnostics</td>
+            <td>The product documentation lists installation-specific identifiers, crash logs, app diagnostics, and performance data. While additional recommended collection was enabled, the Unity Dashboard confirmed receipt of installation ID and device, OS, memory, GPU, screen, language, locale, and country/region metadata for 1.0.1/build1, and installation IDs, sessions, device metadata, and diagnostic data for 1.0.2/code2. The actual collection scope after the settings change is unverified</td>
+            <td>Error analysis and stability improvements. See section 3 for additional use permitted by enabled Usage settings</td>
         </tr>
         <tr>
-            <td>Crash Diagnostics</td>
-            <td>
-                Crash logs, app and device information
-                (subject to SDK configuration)
-            </td>
-            <td>Error analysis and stability</td>
-        </tr>
-        <tr>
-            <td>Gameplay Analytics</td>
-            <td>
-                Gameplay events, analytics identifiers,
-                device information
-                (subject to SDK configuration)
-            </td>
-            <td>Improving gameplay and user experience</td>
+            <td>Email Inquiries, Feedback, and Deletion Requests</td>
+            <td>The sender's email address and message content, if a user sends an email</td>
+            <td>Reviewing inquiries, feedback, and requests</td>
         </tr>
     </tbody>
 </table>
 </div>
 
 <p>
-    Linking a Google account is optional.
-    Users may play the Game with a guest account.
-</p>
-
-<p>
-    We do not directly collect or store
-    Google account passwords.
-</p>
-
-<p>
-    The specific authentication tokens and server
-    access records processed will be confirmed
-    before release.
+    Guest identifiers and game progress are not currently sent to an account or progress server.
+    Local storage is separate from external diagnostic processing by Unity Diagnostics.
+    This build is not described as collecting no data.
 </p>
 
 <h2>2. Data Retention</h2>
 
 <p>
-    Personal information is retained only for
-    the period necessary to fulfill its
-    processing purpose, subject to applicable laws.
+    Local information is stored in the app's storage area on the device.
+    The actual effects of clearing app data, uninstalling, and backup or restoration
+    on deletion and recovery have not yet been verified.
 </p>
 
 <p>
-    When a user requests account deletion,
-    the account and associated gameplay data
-    will be processed for deletion.
-</p>
-
-<p>
-    Certain records may be retained where
-    required by applicable law.
-</p>
-
-<p>
-    Specific retention and deletion periods
-    for server logs, backups, and external analytics
-    services will be finalized before release.
+    Unity's Diagnostics documentation describes a default retention period of 90 days.
+    This product default is not presented as a confirmed retention period covering the additional uses below.
+    Field-specific retention for additional use, actual storage countries, and retention and deletion rules for inquiry emails are under review.
+    This draft does not specify a finalized app retention period or deletion deadline.
 </p>
 
 <h2>3. Third-Party Services</h2>
 
-<p>
-    We plan to use the following services
-    for diagnostics and gameplay analytics.
-</p>
+<p>The following external diagnostic setting has been confirmed for the current build.</p>
 
 <div class="table-wrap">
 <table>
@@ -248,170 +210,143 @@
         <tr>
             <th>Service</th>
             <th>Provider</th>
-            <th>Purpose</th>
+            <th>Purpose and Verification Status</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>Firebase Crashlytics</td>
-            <td>Google</td>
-            <td>Crash reporting and diagnostics</td>
-        </tr>
-        <tr>
-            <td>GameAnalytics</td>
-            <td>GameAnalytics</td>
-            <td>Gameplay analytics</td>
+            <td>Unity Diagnostics</td>
+            <td>Unity</td>
+            <td>Error analysis and stability improvements. Enabled in build settings; the Dashboard currently shows Collection settings: Essential + Recommended and Additional Recommended Data: ON</td>
         </tr>
     </tbody>
 </table>
 </div>
 
 <p>
-    Actual integration, data categories,
-    service provider relationships, and
-    retention and transfer conditions
-    will be verified before release.
+    In the Unity Dashboard project matching the release source,
+    Additional Recommended Data was restored to ON and rechecked.
+    Collection settings currently shows Essential + Recommended, and Essential collection is always enabled.
+    All four Usage options are enabled: customer-centric features, modeling and aggregated insights,
+    technical support, and business recommendations.
+    Additional Access for Unity Ads has not been granted.
+    Google Analytics is not linked.
 </p>
 
-<p>Additional information:</p>
+<p>
+    Unity's product documentation describes Essential data such as crash logs, telemetry, and configuration metadata needed for services.
+    Additional Recommended can include data beyond what is essential for the services in use.
+    Enabled Usage settings permit additional purposes such as aggregated, abstracted cross-developer features,
+    anonymized benchmarks and model improvements, technical support, and business recommendations.
+    The fields actually used and the app's disclosure and use scope require separate review.
+</p>
+
+<p>
+    The three additional facts pending for data safety classification are personally linkable fields entering independent processing
+    and the point of anonymization; whether country/subdivision represents physical location estimation or merely locale;
+    and whether additional recommended collection includes app interactions beyond the four basic diagnostic data types.
+    Enabled Usage settings or accepted conditions alone do not determine sharing for all four types.
+</p>
+
+<p>
+    Before the collection settings change, following com.teamdoodle.doodledefense version 1.0.1/build1,
+    receipt of installation IDs, sessions, device metadata, and diagnostic data is also confirmed
+    from Android Play installation sessions of the current review build, 1.0.2/code2.
+    Device synchronization, changes to the actual collection scope, and the propagation delay
+    after the settings transitions remain unverified. Previously received data has not been deleted.
+    The source and reporting classification of country/region metadata are under review.
+</p>
+
+<p>
+    Firebase Crashlytics and GameAnalytics are future plans; their SDKs are absent from the current build.
+    The account server is also under development and is not connected to this local build.
+</p>
+
+<p>Product-level Unity references, separate from this app's actual operating conditions:</p>
 
 <ul>
-    <li>
-        <a href="https://firebase.google.com/support/privacy">
-            Firebase Privacy Information
-        </a>
-    </li>
-    <li>
-        <a href="https://www.gameanalytics.com/trust">
-            GameAnalytics Privacy Information
-        </a>
-    </li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/privacy-overview">Unity Diagnostics Privacy Overview</a></li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/google-data-safety">Unity Diagnostics Google Play Data Safety Information</a></li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/collection-settings">Unity Collection Settings</a></li>
+    <li><a href="https://docs.unity.com/en-us/cloud/developer-data/data-usage-settings">Unity Additional Usage Settings</a></li>
 </ul>
 
 <h2>4. International Data Transfers</h2>
 
 <p>
-    Information may be processed outside
-    the user's country when third-party
-    analytics or diagnostic services are used.
-</p>
-
-<p>
-    Transfer recipients, destination countries,
-    categories of data, transfer methods,
-    timing, purposes, retention periods,
-    legal grounds, and applicable user choices
-    will be confirmed and disclosed as required
-    before release.
+    External processing by Unity Diagnostics requires review.
+    The recipients, countries, data categories, transfer methods and timing, purposes,
+    retention, legal grounds, and user choices applicable to this app are not yet finalized.
 </p>
 
 <h2>5. Data Sharing and Processing</h2>
 
 <p>
-    We manage disclosures to third parties
-    and processing by service providers
-    in accordance with applicable laws.
+    The basic Diagnostics processing relationship must be distinguished from additional use under enabled Usage settings.
+    Unity's terms describe separate data protection roles for certain purposes,
+    and acceptance of controller-controller conditions was confirmed in the actual Usage screen.
+    This draft does not classify all processing as processing on our behalf or as no sharing.
+    Specific disclosure, service provider, and international transfer arrangements are under review.
 </p>
 
-<p>
-    Actual data sharing and processing
-    arrangements, including infrastructure
-    providers, will be verified and described
-    in the finalized policy.
-</p>
+<p><a href="https://unity.com/legal/developer-data-framework-additional-terms">Unity Developer Data Framework Additional Terms</a></p>
 
 <h2>6. Data Deletion</h2>
 
 <p>
-    Personal information will be deleted
-    when its purpose has been fulfilled or
-    its retention period has expired.
+    The Unity Dashboard route to request Diagnostics deletion by installation ID has been confirmed.
+    No deletion was executed, and the process from user submission through completion has not been verified.
+    Deletion of local save information and inquiry emails requires separate verification.
+</p>
+
+<h2>7. User Rights and Inquiries</h2>
+
+<p>
+    Privacy inquiries about access, correction, deletion, or restriction of processing and deletion requests may be submitted to the email below.
+    Data identification, identity verification, and request handling procedures are under review.
+    This draft does not guarantee completion of deletion in response to a request.
+</p>
+
+<h2>8. Local Data and Deletion Information</h2>
+
+<p>
+    This build does not create server accounts or Google or Apple account links.
+    It has no function to remotely delete local device data through email.
+    The in-game LOCAL-0001 is a shared display value, not a unique identifier for deletion requests.
 </p>
 
 <p>
-    Electronic data will be deleted using
-    methods designed to prevent unauthorized
-    restoration or recovery.
+    Once means of checking and forwarding the Unity installation ID are included in the release build and verified on a device,
+    the planned procedure is for the operator to use the Unity installation ID received through an inquiry to request deletion of Unity diagnostic data.
+    This is separate from local game saves and server account data. Immediate deletion or a fixed completion date is not guaranteed.
+    The automatic inquiry form is not yet a feature provided and verified in the current release build.
 </p>
 
-<p>
-    Information subject to legal retention
-    obligations may be stored separately
-    for the applicable period.
-</p>
-
-<h2>7. User Rights</h2>
-
-<p>
-    Subject to applicable laws, users may
-    request access to, correction of,
-    deletion of, or restriction of
-    processing of their personal information.
-</p>
-
-<p>
-    Requests may be submitted using
-    the contact email below.
-    Additional verification may be required
-    to protect the account owner.
-</p>
-
-<h2>8. Account Deletion</h2>
-
-<p>
-    Users may request deletion of their
-    game accounts.
-</p>
-
-<p>
-    Deletion includes the guest account,
-    linked Google account identifier,
-    in-game currency, stage progress,
-    upgrades, and related gameplay records.
-</p>
-
-<p>
-    For instructions, please visit:
-</p>
-
-<p>
-    <a href="../delete-account/">
-        Account Deletion
-    </a>
-</p>
+<p><a href="../delete-account/">Local Data and Deletion Information</a></p>
 
 <h2>9. Data Security</h2>
 
 <p>
-    We aim to protect personal information
-    through appropriate technical and
-    organizational safeguards, including
-    access controls, authentication security,
-    and encrypted communication.
+    Access permissions and security procedures for local information, Unity diagnostic data,
+    and inquiry emails are under review. This draft does not claim that email access restrictions
+    or specific security measures are already implemented.
 </p>
 
 <h2>10. Contact Information</h2>
 
 <p>
     Operator: TeamDoodle<br>
-    Game: doodledoodle<br>
-    Email:
-    <a href="mailto:teamdoodle.dev@gmail.com">
-        teamdoodle.dev@gmail.com
-    </a>
+    Game: 끄적끄적 디펜스<br>
+    Privacy inquiry, deletion request, and feedback email:
+    <a href="mailto:teamdoodle.dev@gmail.com">teamdoodle.dev@gmail.com</a>
 </p>
 
-<h2>11. Changes to This Policy</h2>
+<h2>11. Finalization and Changes to This Policy</h2>
 
 <p>
-    Material changes to this policy will
-    be communicated through this website
-    or in-game notices as appropriate.
-</p>
-
-<p>
-    The effective date will be finalized
-    before the Game is released.
+    The effective date is not finalized. The responsible contact
+    and processing procedures require review before finalization.
+    Future changes such as server or SDK integration require verification of the practices actually implemented.
 </p>
 
 <footer>
@@ -419,7 +354,7 @@
     <p>
         <a href="../">Home</a> ·
         <a href="../ko/">한국어</a> ·
-        <a href="../delete-account/">Account Deletion</a>
+        <a href="../delete-account/">Local Data &amp; Deletion</a>
     </p>
 </footer>
 
